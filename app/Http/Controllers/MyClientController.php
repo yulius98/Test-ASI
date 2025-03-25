@@ -90,5 +90,12 @@ class MyClientController extends Controller
             $client = MyClient::create(array_merge($request->all(), ['client_logo' => $clientLogoUrl]));
             Redis::set($client->slug, json_encode($client));
             return response()->json($client, 201);
-    }       
+    }      
+    
+    public function create()
+    {
+        return view('my_client.create'); // Return the create view
+    }
+
+    
 }
