@@ -19,9 +19,8 @@ class CreateMyClientTable extends Migration
             $table->text('address')->nullable();
             $table->string('phone_number', 50)->nullable();
             $table->string('city', 50)->nullable();
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
-            $table->timestamp('deleted_at')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
