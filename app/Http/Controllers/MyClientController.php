@@ -92,10 +92,10 @@ class MyClientController extends Controller
             return response()->json($client, 201);
     }      
     
-    public function create()
-    {
-        return view('my_client.create'); // Return the create view
-    }
+    public function createView()
+{
+    return view('my_client.create'); // Return the create view
+}
 
     
 }
